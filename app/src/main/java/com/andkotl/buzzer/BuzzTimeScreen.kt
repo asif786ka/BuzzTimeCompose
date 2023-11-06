@@ -95,7 +95,7 @@ fun MainScreen(stopwatchService: StopwatchService) {
                 )
             ) {
                 Text(
-                    text = if (currentState == StopwatchState.Started) "Stop"
+                    text = if (currentState == StopwatchState.Started) "Pause"
                     else if ((currentState == StopwatchState.Stopped)) "Resume"
                     else "Start"
                 )
@@ -113,7 +113,7 @@ fun MainScreen(stopwatchService: StopwatchService) {
                 enabled = seconds != "00" && currentState != StopwatchState.Started,
                 colors = ButtonDefaults.buttonColors(disabledBackgroundColor = Light)
             ) {
-                Text(text = "Cancel")
+                Text(text = "Reset")
             }
         }
     }
